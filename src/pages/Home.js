@@ -18,10 +18,13 @@ const Home = () => {
   return (
   <div>
       <section className="py-16">
-        <div className="container max-auto">
-          {filteredProducts.map((product, i) => (
-            <div key={i} className=''>{product.title}</div>
-          ))}
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0">
+            {filteredProducts.map((product, i) => (
+              <div key={i} className='w-full h-[300px] bg-pink-200'>{product.title}</div>
+            ))}            
+          </div>
+
         </div>
     </section>
   </div>);
