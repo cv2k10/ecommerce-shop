@@ -1,5 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react';
 import { ProductContext } from '../contexts/ProductContext';
+import Product from '../components/Product';
 
 const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -21,7 +22,9 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px] max-w-sm mx-auto md:max-w-none md:mx-0">
             {filteredProducts.map((product, i) => (
-              <div key={i} className='w-full h-[300px] bg-pink-200'>{product.title}</div>
+              <div key={i} className=''>{
+                <Product product={product} key={product.key} />
+              }</div>
             ))}            
           </div>
 
